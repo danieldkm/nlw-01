@@ -122,3 +122,99 @@ npx ts-node-dev src/server.ts
 ```sh
 npx create-react-app web --template=typescript
 ```
+
+# Dia 2
+
+## Explicando conceitos
+
+### Rotas e recursos
+
+  - Rota: Endereço completo da requisição.
+  - Recurso: Qual entidade estamos acessando do sistema.
+
+### Métodos HTTP
+
+- GET: Buscar uma ou mais informações do back-end
+- POST: Criar uma nova informação no back-end
+- PUT: Atualizar uma informação existente no back-end
+- DELETE: Remover uma informação do back-end
+
+- exemplos
+  - POST http://localhost:3333/users = Criar um usuário
+  - GET http://localhost:3333/users = Listar usuários
+  - GET http://localhost:333/users/5 = Buscar dados do usuário com ID 5
+
+### Tipos de parâmetros
+- Request params: Parâmetros que vem na própria rota que identificam um recurso
+- Query params: Parâmetros que vem na própria rota geralmente opcionais para filtros, paginação
+- Query body: Parâmetros para criação/atualização de informações.
+
+## Utilizando o Insomnia
+- Ferramenta para realizar requisições no back-end
+
+## Qual banco de dados vamos utilizar?
+- SQL: Postgres, MySQL, SQLite, SQL Server
+- NoSQL: MongoDB, CouchDB
+
+- será utilizado SQLite
+
+```sh
+SELECT * FROM users WHERE name = 'Diego'
+knex('users').where('name', 'diego').select('*')
+# o bom de utilizar query build é que podemos manter o codigo em javascript com suas intelisenses
+```
+
+## Configurando conexão com o banco
+```javascript
+// connection.js
+import knex from 'knex';
+import path from 'path';
+
+const connection = knex({
+  client: 'sqlite3',
+  connection: {
+    filename: path.resolve(__dirname, 'database.sqlite')
+  }
+});
+
+export default connection;
+```
+
+- Migrations = Histórico do banco de dados
+```sh
+npx knex migrate:latest --knexfile knexfile.ts migrate:latest
+```
+
+## Identificando entidades da aplicação
+- points (pontos de colete)
+  - image
+  - name
+  - email
+  - whatsapp
+  - latitude
+  - longitude
+  - city
+  - uf
+- items (itens para coleta)
+  - title
+  - image
+- point_items (Relacionamentos dos itens que o ponto coleta)
+  - point_id
+  - item_id
+- muitos para muitos (N-N) (Pivot)
+
+## Funcionalidades da aplicação
+- Cadastro de ponto de coleta
+- Listar os itens da coleta
+- Lista pontos (filtro por estado/cidade/itens)
+- Listar um ponto de coleta especifico
+
+## Construção do app
+- index, show, create, update, delete
+- Service pattern
+- repository patter (Data Mapper)
+## Adicionando CORS
+```sh
+npm install cors
+npm install @types/cors -D
+```
