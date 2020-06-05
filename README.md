@@ -50,6 +50,7 @@ Novo dev, **Desafio**: incluir a informação da cidade e UF do usuário nesse r
 - Podemos chamar de framework? sim e Não
 - Tudo fica dentro do JavaScript;
 - React / ReactJS / React Native;
+- [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
 
 ### Vantagens
 - Organização do código;
@@ -238,14 +239,45 @@ npm install @types/cors -D
 ### Componente (Header)
 - Separar em pequenos bloco que podem ser reutilizados
 ### Propriedade
+- quando tu quer passar algum atributo ao seu componente
+
 ### Estado e imutabilidade
 
 ## Arquivos para Download (Layout, imagens e CSS)
+- adicionar a fonte do Google no arquivo index.html, Roboto Regular 400 e Ubuntu Bold 700
+```html
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+```
 ## Construção do HTML da primeira página
+```sh
+npm install react-icons
+```
 ## Configuração da navegação
+```sh
+npm install react-router-dom
+npm install @types/react-router-dom -D
+```
 ## Construção do HTML do formulário
 ## Integrando mapa no formulário
+- [leaflet](https://leafletjs.com/)
+- lib: [react-leaflet](https://react-leaflet.js.org/)
+```sh
+npm install leaflet react-leaflet
+npm install @types/react-leaflet -D
+```
+- Incluir o [css](https://leafletjs.com/examples/quick-start/) no index.html
+```html
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+```
 ## Buscando itens de coleta da API
+```sh
+npm install axios
+```
+- **sempre que criar um array ou um objeto: manualmente deve informar o tipo da variavel.**
+
 ## Buscando estados e cidades do IBGE
+- [IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-_)
 ## Cadastro de ponto de coleta na API
-## Mensagem de sucesso
+## Mensagem de sucesso 
