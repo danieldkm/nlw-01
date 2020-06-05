@@ -218,3 +218,31 @@ npx knex migrate:latest --knexfile knexfile.ts migrate:latest
 npm install cors
 npm install @types/cors -D
 ```
+
+
+# Dia 3: Front-end web do app
+
+## Limpando estrutura da aplicação
+- na pasta public manter so o index.html
+- na pasta src, remover 
+  - App.test.tsx
+  - index.css
+  - logo.svg
+  - serviceWorker.ts
+  - setupTests.ts
+## Explicando conceitos
+### `index.html` e `div#root`
+### JSX
+### Componente (Header)
+### Propriedade
+### Estado e imutabilidade
+
+## Arquivos para Download (Layout, imagens e CSS)
+## Construção do HTML da primeira página
+## Configuração da navegação
+## Construção do HTML do formulário
+## Integrando mapa no formulário
+## Buscando itens de coleta da API
+## Buscando estados e cidades do IBGE
+## Cadastro de ponto de coleta na API
+## Mensagem de sucesso
