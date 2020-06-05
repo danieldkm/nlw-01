@@ -233,7 +233,10 @@ npm install @types/cors -D
 ## Explicando conceitos
 ### `index.html` e `div#root`
 ### JSX
+- Sintaxe de XML dentro do JavaScript
+- possibilidade de escrver html "dentro" do javascript
 ### Componente (Header)
+- Separar em pequenos bloco que podem ser reutilizados
 ### Propriedade
 ### Estado e imutabilidade
 
