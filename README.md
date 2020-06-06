@@ -50,6 +50,7 @@ Novo dev, **Desafio**: incluir a informação da cidade e UF do usuário nesse r
 - Podemos chamar de framework? sim e Não
 - Tudo fica dentro do JavaScript;
 - React / ReactJS / React Native;
+- [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
 
 ### Vantagens
 - Organização do código;
@@ -218,3 +219,137 @@ npx knex migrate:latest --knexfile knexfile.ts migrate:latest
 npm install cors
 npm install @types/cors -D
 ```
+
+
+# Dia 3: Front-end web do app
+
+## Limpando estrutura da aplicação
+- na pasta public manter so o index.html
+- na pasta src, remover 
+  - App.test.tsx
+  - index.css
+  - logo.svg
+  - serviceWorker.ts
+  - setupTests.ts
+## Explicando conceitos
+### `index.html` e `div#root`
+### JSX
+- Sintaxe de XML dentro do JavaScript
+- possibilidade de escrver html "dentro" do javascript
+### Componente (Header)
+- Separar em pequenos bloco que podem ser reutilizados
+### Propriedade
+- quando tu quer passar algum atributo ao seu componente
+
+### Estado e imutabilidade
+
+## Arquivos para Download (Layout, imagens e CSS)
+- adicionar a fonte do Google no arquivo index.html, Roboto Regular 400 e Ubuntu Bold 700
+```html
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+```
+## Construção do HTML da primeira página
+```sh
+npm install react-icons
+```
+## Configuração da navegação
+```sh
+npm install react-router-dom
+npm install @types/react-router-dom -D
+```
+## Construção do HTML do formulário
+## Integrando mapa no formulário
+- [leaflet](https://leafletjs.com/)
+- lib: [react-leaflet](https://react-leaflet.js.org/)
+```sh
+npm install leaflet react-leaflet
+npm install @types/react-leaflet -D
+```
+- Incluir o [css](https://leafletjs.com/examples/quick-start/) no index.html
+```html
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+```
+## Buscando itens de coleta da API
+```sh
+npm install axios
+```
+- **sempre que criar um array ou um objeto: manualmente deve informar o tipo da variavel.**
+
+## Buscando estados e cidades do IBGE
+- [IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-_)
+## Cadastro de ponto de coleta na API
+## Mensagem de sucesso 
+
+# Dia 4: Mobile do App
+
+## Instalar o Expo CLI
+```sh
+npm install -g expo-cli
+expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto 
+```
+- [expo-common-issues](https://github.com/Rocketseat/expo-common-issues)
+- [expo google fonts](https://github.com/expo/google-fonts)
+## Criar projeto com Expo
+```sh
+expo init mobile
+? Choose a template: expo-template-blank-typescript
+
+� Using Yarn to install packages. You can pass --npm to use npm instead.
+
+√ Downloaded and extracted project files.
+√ Installed JavaScript dependencies.
+
+✅ Your project is ready!
+
+To run your project, navigate to the directory and run one of the following yarn commands.
+
+- cd mobile
+- yarn start # you can open iOS, Android, or web from here, or run them directly with the commands below.
+- yarn android
+- yarn ios # requires an iOS device or macOS for access to an iOS simulator
+- yarn web
+```
+## Executando projet
+```sh
+npm start
+```
+- [React navigation](https://reactnavigation.org/docs/getting-started)
+```sh
+npm install @react-navigation/native
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+# React navigation
+npm install @react-navigation/stack
+
+# buscar sua localização
+expo install expo-location
+```
+## Configurando emulador (caso necessário)
+## Diferenças do React Native para ReactJS
+### Elementos
+### Estilização
+## Criação página home
+## Criando página do mapa
+ - [expo mail compose](https://docs.expo.io/versions/latest/sdk/mail-composer/)
+```sh
+npm install react-native-maps
+npm install expo-constants
+#lidar com svg
+npm install react-native-svg
+
+# lidar com email - expo mail compose
+expo install expo-mail-composer
+```
+## Criando página do detalhe
+## Buscando itens da API
+## Buscando pontos da API
+## Buscando detalhes do ponto da API
+## Busca de UF e cidade
+## Comemorar nossa aplicação ponta
+
+## Desafio
+- buscar dados do IBGE
+- utilizar o react-native-pikcer-select, para selecionar uf e cidade
+- mesma logica da web
