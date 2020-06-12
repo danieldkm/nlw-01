@@ -353,3 +353,38 @@ expo install expo-mail-composer
 - buscar dados do IBGE
 - utilizar o react-native-pikcer-select, para selecionar uf e cidade
 - mesma logica da web
+
+# Dia 5: Recursos avançados
+
+## upload de imagens
+- lib para lidar com uploads
+```sh
+npm install multer
+npm install @types/multer -D
+```
+- lib para serialização, buscar por:
+  - Serialização
+  - API Transform
+### Configuranndo back-end
+### Criando dropzone no reactjs
+- lib para lidar com uploads
+```sh
+npm install react-dropzone
+```
+
+## Validação de entrada de dados
+- lib para validação dos campos no backend
+```sh
+npm install celebrate
+npm install @types/hapi__joi -D
+```
+## Adicionando projeto no github
+## Deploy (Onde hospedar)
+### Back-end
+- Heroku
+- Digital Ocean
+- AWS
+
+### Front-end
+- Netlify / Vercel
+- Amazon S3 / Google Cloud Storage
